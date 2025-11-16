@@ -1,0 +1,34 @@
+{
+  "name": ".NET 7 Dev Container",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:0-7.0",
+  
+  // Đảm bảo sử dụng ARM64 image
+  "runArgs": ["--platform=linux/arm64"],
+  
+  "features": {
+    "ghcr.io/devcontainers/features/dotnet:1": {
+      "version": "7.0"
+    }
+  },
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit"
+      ],
+      "settings": {
+        "omnisharp.useModernNet": true
+      }
+    }
+  },
+  
+  // Mount code và preserve git config
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+  ],
+  
+  "postCreateCommand": "dotnet restore",
+  
+  "remoteUser": "vscode"
+}

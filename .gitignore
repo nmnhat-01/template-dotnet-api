@@ -1,0 +1,132 @@
+# ===========================================
+# .NET / ASP.NET Core / C# Ignore
+# ===========================================
+
+# Build folders
+bin/
+obj/
+out/
+
+# .NET user-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Logs
+*.log
+logs/
+log/
+
+# Entity Framework migrations snapshots
+*Migrations/
+
+# Cache
+*.cache
+*.nvuser
+
+# .NET Razor
+*.rdb
+*.razor.g.cs
+*.generated.cs
+
+# Publish output
+publish/
+artifacts/
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Generated files
+Generated/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# ===========================================
+# Visual Studio
+# ===========================================
+
+# Visual Studio temp
+.vs/
+
+# Packages (should be restored from NuGet)
+*.nupkg
+packages/
+
+# Backup files
+*_i.c
+*_p.c
+*_h.h
+
+# ===========================================
+# VS Code Ignore
+# ===========================================
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# VS Code server (remote containers, SSH)
+.vscode-server/
+.vscode-test/
+
+# ===========================================
+# Dev Container Ignore
+# ===========================================
+
+.devcontainer/backup/
+.devcontainer/Dockerfile.backup
+
+# Docker
+docker-compose*.yaml
+docker-compose*.yml
+**/.dockerignore
+
+# ===========================================
+# OS Generated Files
+# ===========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux temp
+*~
+
+# ===========================================
+# Git
+# ===========================================
+
+*.orig
+*.rej
+
+# ===========================================
+# Other common ignores
+# ===========================================
+
+*.tmp
+*.bak
+*.swp
+*.cache
+*.pid
+*.seed
+*.sqlite
+*.db
+*.tar.gz
+*.zip
+
+# JetBrains Rider
+.idea/
+*.ipr
+*.iws
+*.iml
