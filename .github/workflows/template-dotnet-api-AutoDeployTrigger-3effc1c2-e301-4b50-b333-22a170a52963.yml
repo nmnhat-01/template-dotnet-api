@@ -34,16 +34,14 @@ jobs:
       - name: Build and push container image to registry
         uses: azure/container-apps-deploy-action@v2
         with:
-          appSourcePath: ${{ github.workspace }}TemplateAPI
-          _dockerfilePathKey_: _dockerfilePath_
-          _targetLabelKey_: _targetLabel_
+          appSourcePath: .
+          dockerfilePath: ./TemplateAPI/Dockerfile
           registryUrl: ghcr.io
           registryUsername: ${{ secrets.TEMPLATEDOTNETAPI_REGISTRY_USERNAME }}
           registryPassword: ${{ secrets.TEMPLATEDOTNETAPI_REGISTRY_PASSWORD }}
+          imageToBuild: ghcr.io/${{ secrets.TEMPLATEDOTNETAPI_REGISTRY_USERNAME }}/template-dotnet-api:${{ github.sha }}
           containerAppName: template-dotnet-api
           resourceGroup: TemplateDotNetAPI
-          imageToBuild: ghcr.io/template-dotnet-api:${{ github.sha }}
-          _buildArgumentsKey_: |
-            _buildArgumentsValues_
+
 
 
